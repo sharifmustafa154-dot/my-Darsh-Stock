@@ -1,0 +1,38 @@
+{
+  "name": "Darsh Stock - متجر جوارب",
+  "short_name": "Darsh Stock",
+  "description": "أول متجر متخصص في الجوارب بمصر - جودة وتوصيل سريع",
+  "start_url": "/my-website/",
+  "scope": "/my-website/",
+  "display": "standalone",
+  "theme_color": "#FACC15",
+  "background_color": "#0c0c0e",
+  "orientation": "portrait",
+  "lang": "ar",
+  "dir": "rtl",
+  "icons": [
+    {
+      "src": "https://i.supaimg.com/6a853e10-0715-4079-9490-beb2645fc8b3/788794ba-9ba6-4a6e-b04b-7c1fa38bbe9a.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://i.supaimg.com/6a853e10-0715-4079-9490-beb2645fc8b3/788794ba-9ba6-4a6e-b04b-7c1fa38bbe9a.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "جوارب رجالي",
+      "short_name": "رجالي",
+      "url": "/my-website/#men"
+    },
+    {
+      "name": "جوارب حريمي",
+      "short_name": "حريمي",
+      "url": "/my-website/#women"
+    }
+  ]
+}
