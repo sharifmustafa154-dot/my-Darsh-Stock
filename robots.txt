@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sharifmustafa154-dot.github.io/my-website/sitemap.xml
