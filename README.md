@@ -4,7 +4,7 @@
 نقدم جوارب رجالي، حريمي، أطفال، وجوارب فوطة بجودة عالية وتوصيل سريع عبر Uber و inDrive.
 
 ## 🌐 الموقع
-[https://sharifmustafa154-dot.github.io/my-website/](https://sharifmustafa154-dot.github.io/my-website/)
+[https://sharifmustafa154-dot.github.io/my-website/]([https://sharifmustafa154-dot.github.io/my-website/](https://sharifmustafa154-dot.github.io/my-Darsh-Stock/))
 
 ## ✨ المميزات
 - سرعة فائقة وأداء 90+ على PageSpeed.
