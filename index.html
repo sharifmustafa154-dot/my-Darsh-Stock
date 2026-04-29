@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Darsh Stock | أول متجر جوارب في مصر - جودة وتوصيل سريع</title>
+    <meta name="description" content="Darsh Stock: أول متجر متخصص في الجوارب بمصر. جوارب رجالي، حريمي، أطفال، جوارب فوطة. جودة عالية، توصيل عبر Uber و inDrive، دفع آمن فودافون كاش.">
+    <meta name="keywords" content="جوارب, جوارب رجالي, جوارب حريمي, جوارب أطفال, جوارب فوطة, Darsh Stock, درش ستوك, SEO, تحسين محركات البحث, AI image search, visual search">
+    <meta name="theme-color" content="#FACC15">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="image" href="https://i.supaimg.com/6a853e10-0715-4079-9490-beb2645fc8b3/788794ba-9ba6-4a6e-b04b-7c1fa38bbe9a.png" fetchpriority="high">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet"></noscript>
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0a0a0c;
+            font-family: 'Cairo', sans-serif;
+            overflow-x: hidden;
+            color: #fff;
+            transition: background 0.2s;
+        }
+
+        body.english {
+            direction: ltr;
+            text-align: left;
+        }
+
+        body.english .arabic-only {
+            display: none;
+        }
+
+        body:not(.english) .english-only {
+            display: none;
+        }
+
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0a0a0c;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #FACC15;
+            border-radius: 4px;
+        }
+
+        /* ========= شريط الإعلان المتحرك (Marquee) ========= */
+        .marquee-top {
+            width: 100%;
+            overflow: hidden;
+            background: #FACC15;
+            color: #000;
+            padding: 6px 0;
+            white-space: nowrap;
+            position: relative;
+            z-index: 10;
+        }
+
+        .marquee-top-inner {
+            display: inline-block;
+            animation: marqueeLeft 25s linear infinite;
+            padding-left: 100%;
+            will-change: transform;
+        }
+
+        @keyframes marqueeLeft {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .marquee-top-inner span {
+            margin: 0 28px;
+            font-weight: 900;
+            font-size: 1.1rem;
+            display: inline-block;
+            letter-spacing: 1px;
+        }
+
+        @media (min-width: 768px) {
+            .marquee-top-inner span {
+                font-size: 1.3rem;
+                margin: 0 40px;
+            }
+        }
+
+        /* ========= قسم الهيرو (الصورة الرئيسية) ========= */
+        .hero-section {
+            position: relative;
+            width: 100%;
+            min-height: 55vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: #0a0a0c;
+        }
+
+        .hero-bg-img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+            opacity: 0.9;
+            padding: 20px;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at center, transparent 30%, #0a0a0c 90%);
+            pointer-events: none;
+        }
+
+        .darsh-watermark {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            opacity: 0.06;
+            pointer-events: none;
+            font-weight: 900;
+            font-size: 2rem;
+            color: #FACC15;
+            text-transform: uppercase;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .darsh-watermark span {
+            display: inline-block;
+            transform: rotate(-3deg);
+        }
+
+        /* ========= الأزرار والبطاقات ========= */
+        .btn-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #25D366;
+            color: #000;
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+            z-index: 5;
+            position: relative;
+        }
+
+        .btn-whatsapp:hover {
+            transform: scale(1.04);
+            box-shadow: 0 6px 28px rgba(37, 211, 102, 0.5);
+        }
+
+        .phone-number {
+            font-weight: 800;
+            font-size: 1.4rem;
+            letter-spacing: 1px;
+            color: #FACC15;
+            direction: ltr;
+            display: inline-block;
+        }
+
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            transition: transform 0.2s, filter 0.2s;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        .social-icon:hover {
+            transform: scale(1.1);
+            filter: brightness(1.2);
+        }
+
+        .social-icon svg {
+            width: 22px;
+            height: 22px;
+        }
+
+        .search-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            transition: transform 0.2s, filter 0.2s;
+            text-decoration: none;
+            margin: 0 5px;
+            background: #1a1a1e;
+            border: 1px solid rgba(250, 204, 21, 0.4);
+        }
+
+        .search-icon:hover {
+            transform: scale(1.1);
+            background: #FACC15;
+            border-color: #FACC15;
+        }
+
+        .search-icon svg {
+            width: 22px;
+            height: 22px;
+        }
+
+        /* ========= الصور (grid) ========= */
+        .card {
+            transition: transform 0.25s ease, box-shadow 0.2s;
+            cursor: pointer;
+            border-radius: 16px;
+            overflow: hidden;
+            background: #1a1a1e;
+            aspect-ratio: 3/4;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(250, 204, 21, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* ========= قسم SEO ========= */
+        .seo-card {
+            background: linear-gradient(135deg, #1a1a1e, #111115);
+            border: 1px solid rgba(250, 204, 21, 0.2);
+            border-radius: 20px;
+            padding: 24px 20px;
+            transition: all 0.2s;
+            height: 100%;
+        }
+
+        .seo-card:hover {
+            border-color: #FACC15;
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(250, 204, 21, 0.1);
+        }
+
+        .seo-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            margin-bottom: 14px;
+        }
+
+        .tool-badge {
+            display: inline-block;
+            background: rgba(250, 204, 21, 0.1);
+            border: 1px solid rgba(250, 204, 21, 0.3);
+            color: #FACC15;
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin: 4px;
+            transition: all 0.2s;
+        }
+
+        .tool-badge:hover {
+            background: #FACC15;
+            color: #000;
+            transform: scale(1.02);
+        }
+
+        /* ========= AI Image Search ========= */
+        .ai-search-area {
+            background: rgba(250, 204, 21, 0.03);
+            border: 1px dashed rgba(250, 204, 21, 0.4);
+            border-radius: 24px;
+            padding: 30px 20px;
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            transition: border-color 0.3s;
+        }
+
+        .ai-search-area:hover {
+            border-color: #FACC15;
+        }
+
+        .ai-upload-btn {
+            background: #FACC15;
+            color: #000;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .ai-upload-btn:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 20px rgba(250, 204, 21, 0.4);
+        }
+
+        #aiResultsGrid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .ai-preview-img {
+            width: 100%;
+            border-radius: 16px;
+            aspect-ratio: 3/4;
+            object-fit: cover;
+            background: #1a1a1e;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .ai-preview-img:hover {
+            transform: scale(1.03);
+        }
+
+        /* ========= مودال الصورة ========= */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.96);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            backdrop-filter: blur(6px);
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .modal-content img {
+            width: auto;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 16px;
+        }
+
+        .admin-panel {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 18px;
+            background: #1a1a1e;
+            border: 1px solid #FACC15;
+            border-radius: 20px;
+            padding: 20px;
+            z-index: 1001;
+            width: 280px;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        .admin-panel.active {
+            display: block;
+        }
+
+        .admin-panel input,
+        .admin-panel select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 14px;
+            background: #0c0c0e;
+            border: 1px solid #333;
+            color: white;
+        }
+
+        .admin-panel button {
+            background: #FACC15;
+            color: #000;
+            padding: 10px;
+            border: none;
+            border-radius: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            transition: opacity 0.2s;
+        }
+
+        .close-panel {
+            position: absolute;
+            top: 10px;
+            right: 12px;
+            cursor: pointer;
+            color: white;
+            background: rgba(255, 0, 0, 0.6);
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+
+        .upload-btn {
+            position: fixed;
+            top: 18px;
+            left: 18px;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(8px);
+            color: #FACC15;
+            border: 1px solid #FACC15;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 14px;
+        }
+
+        .upload-btn:hover {
+            background: #FACC15;
+            color: #000;
+            transform: scale(1.02);
+        }
+
+        .lang-switch {
+            position: fixed;
+            top: 18px;
+            right: 18px;
+            z-index: 1000;
+            background: #FACC15;
+            color: #000;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s;
+            font-size: 14px;
+        }
+
+        .lang-switch:hover {
+            transform: scale(1.03);
+            background: #e5b80b;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 44px;
+            height: 44px;
+            background: #FACC15;
+            border-radius: 50%;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s;
+            border: none;
+        }
+
+        .back-to-top.show {
+            display: flex;
+        }
+
+        .back-to-top:hover {
+            transform: scale(1.05);
+            background: #e5b80b;
+        }
+
+        .footer-text {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            text-align: center;
+            padding: 30px 16px 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            margin-top: 30px;
+        }
+
+        @media (max-width: 640px) {
+            .upload-btn, .lang-switch {
+                padding: 5px 10px;
+                font-size: 11px;
+            }
+            .admin-panel { width: 250px; }
+            .hero-section { min-height: 45vh; }
+            .darsh-watermark { font-size: 1.2rem; gap: 10px; }
+            .social-icon, .search-icon { width: 36px; height: 36px; }
+            .social-icon svg, .search-icon svg { width: 18px; height: 18px; }
+        }
+    </style>
+    <!-- JSON-LD Structured Data for SEO -->
+    <script type="application/ld+json">
+        { "@context": "https://schema.org", "@type": "ClothingStore", "name": "Darsh Stock", "url": "https://darshstock.com", "logo": "https://i.supaimg.com/6a853e10-0715-4079-9490-beb2645fc8b3/788794ba-9ba6-4a6e-b04b-7c1fa38bbe9a.png", "image": "https://i.supaimg.com/6a853e10-0715-4079-9490-beb2645fc8b3/788794ba-9ba6-4a6e-b04b-7c1fa38bbe9a.png", "description": "أول متجر متخصص في الجوارب في مصر. جوارب رجالي، حريمي، أطفال وجوارب فوطة. جودة عالية وتوصيل سريع عبر Uber و inDrive.", "address": { "@type": "PostalAddress", "addressCountry": "EG" }, "contactPoint": { "@type": "ContactPoint", "telephone": "+201005814505", "contactType": "customer service", "availableLanguage": ["Arabic", "English"] }, "priceRange": "EGP 50 - EGP 300" }
+    </script>
+</head>
+<body>
+
+    <button class="lang-switch" onclick="toggleLanguage()" aria-label="Switch Language">🌐 عربي / English</button>
+    <button class="upload-btn" onclick="toggleAdminPanel()" aria-label="رفع صور">📤 رفع صور</button>
+
+    <div id="adminPanel" class="admin-panel">
+        <div class="close-panel" onclick="toggleAdminPanel()">✕</div>
+        <h3 class="text-center text-white text-base font-bold mb-2">📸 إضافة صورة</h3>
+        <select id="collectionSelect">
+            <option value="men">👨 رجالي / Men's</option>
+            <option value="women">👩 حريمي / Women's</option>
+            <option value="kids">👧 أطفال / Kids</option>
+            <option value="towel">🧦 جوارب فوطة / Towel Socks</option>
+        </select>
+        <input type="url" id="imageUrlInput" placeholder="رابط الصورة (URL)" autocomplete="off">
+        <button onclick="addNewImage()">➕ إضافة صورة</button>
+        <p class="text-white/40 text-xs text-center mt-2">⚠️ الصورة تحفظ تلقائياً</p>
+    </div>
+
+    <div class="marquee-top">
+        <div class="marquee-top-inner">
+            <span>⚡ عروض اضافه متاحه الان</span>
+            <span>🧦 Darsh Stock</span>
+            <span>🚀 Uber</span>
+            <span>🚗 inDrive</span>
+            <span>💰 فودافون كاش</span>
+            <span>✨ جودة عالية</span>
+            <span>⚡ عروض اضافه متاحه الان</span>
+            <span>🧦 Darsh Stock</span>
+            <span>🚀 Uber</span>
+            <span>🚗 inDrive</span>
+        </div>
+    </div>
+
+    <section class="hero-section">
+        <div class="darsh-watermark">
+            <span>Darsh</span><span>Darsh</span><span>Darsh</span><span>Darsh</span><span>Darsh</span>
+            <span>Darsh</span><span>Darsh</span><span>Darsh</span><span>Darsh</span><span>Darsh</span>
+            <span>Darsh</span><span>Darsh</span><span>Darsh</span><span>Darsh</span><span>Darsh</span>
+            <span>Darsh</span><span>Darsh</span><span>Darsh</span><span>Darsh</span><span>Darsh</span>
+        </div>
+        <img src="https://i.supaimg.com/6a853e10-0715-4079-9490-beb2645fc8b3/788794ba-9ba6-4a6e-b04b-7c1fa38bbe9a.png" alt="Darsh Stock logo" class="hero-bg-img" fetchpriority="high" style="position: relative; z-index: 2; max-width: 85%; max-height: 70vh; width: auto; height: auto; object-fit: contain; padding: 10px;">
+        <div class="hero-overlay"></div>
+    </section>
+
+    <div style="text-align: center; padding: 20px 16px 10px; position: relative; z-index: 5; background: #0a0a0c;">
+        <p style="margin-bottom: 14px;"><span class="phone-number">01005814505</span></p>
+        <a href="https://whatsapp.com/channel/0029Vb7JggaC6ZvmlJHy0a2x" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+            <span class="arabic-only">اشترك في قناة واتساب</span>
+            <span class="english-only">Join WhatsApp Channel</span>
+        </a>
+    </div>
+
+    <div style="text-align: center; padding: 25px 16px 5px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; background: #0a0a0c; position: relative; z-index: 5;">
+        <a href="https://whatsapp.com/channel/0029Vb7JggaC6ZvmlJHy0a2x" target="_blank" rel="noopener" class="social-icon" style="background: #25D366;" title="WhatsApp"><svg fill="#fff" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg></a>
+        <a href="https://www.facebook.com/share/18eYxuN4TF/" target="_blank" rel="noopener" class="social-icon" style="background: #1877F2;" title="Facebook"><svg fill="#fff" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+        <a href="https://youtube.com/@darshstock" target="_blank" rel="noopener" class="social-icon" style="background: #FF0000;" title="YouTube"><svg fill="#fff" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+        <a href="https://www.tiktok.com/@mustafasharif225" target="_blank" rel="noopener" class="social-icon" style="background: #000; border: 1px solid #fff;" title="TikTok"><svg fill="#fff" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.29 6.29 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.95a8.19 8.19 0 004.78 1.52V7.02a4.85 4.85 0 01-1.01-.33z"/></svg></a>
+    </div>
+
+    <div style="text-align: center; padding: 10px 16px 5px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; background: #0a0a0c; position: relative; z-index: 5;">
+        <span style="display: block; width: 100%; text-align: center; font-size: 0.7rem; color: rgba(255,255,255,0.4); letter-spacing: 2px; margin-bottom: 6px;" class="arabic-only">محركات البحث</span>
+        <span style="display: block; width: 100%; text-align: center; font-size: 0.7rem; color: rgba(255,255,255,0.4); letter-spacing: 2px; margin-bottom: 6px;" class="english-only">Search Engines</span>
+        <a href="https://www.google.com/" target="_blank" rel="noopener" class="search-icon" title="Google Search"><svg viewBox="0 0 24 24" fill="#FACC15"><circle cx="12" cy="12" r="10" fill="none" stroke="#FACC15" stroke-width="2"/><path d="M12 6v6l4 2" stroke="#FACC15" stroke-width="2" fill="none"/></svg></a>
+        <a href="https://duckduckgo.com/" target="_blank" rel="noopener" class="search-icon" title="DuckDuckGo"><svg viewBox="0 0 24 24" fill="#FACC15"><rect x="4" y="4" width="16" height="16" rx="4" fill="none" stroke="#FACC15" stroke-width="2"/><circle cx="12" cy="12" r="3" fill="#FACC15"/></svg></a>
+        <a href="https://www.bing.com/" target="_blank" rel="noopener" class="search-icon" title="Bing"><svg viewBox="0 0 24 24" fill="#FACC15"><polygon points="12,2 22,22 2,22" fill="none" stroke="#FACC15" stroke-width="2"/></svg></a>
+    </div>
+
+    <div id="collectionsContainer" style="padding: 0 16px 10px;"></div>
+
+    <!-- ========== قسم SEO تعليمي ========== -->
+    <section style="padding: 30px 16px 40px; background: #0a0a0c;">
+        <div style="max-width: 900px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 35px;">
+                <p style="font-size: 0.75rem; letter-spacing: 0.25em; text-transform: uppercase; color: #FACC15; font-weight: 600; margin-bottom: 6px;">
+                    <span class="arabic-only">تحسين محركات البحث</span>
+                    <span class="english-only">Search Engine Optimization</span>
+                </p>
+                <h2 style="font-weight: 900; font-size: 2rem; color: #fff; margin-bottom: 8px;">
+                    <span class="arabic-only">أهم 3 أنواع SEO</span>
+                    <span class="english-only">Top 3 Types of SEO</span>
+                </h2>
+                <div style="height: 2px; width: 60px; margin: 0 auto; border-radius: 10px; background: #FACC15;"></div>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; margin-bottom: 30px;">
+                <div class="seo-card">
+                    <div class="seo-icon" style="background: rgba(250,204,21,0.15);">📄</div>
+                    <h3 style="font-weight: 800; font-size: 1.2rem; margin-bottom: 10px; color: #FACC15;"><span class="arabic-only">1) SEO داخلي (On-Page)</span><span class="english-only">1) On-Page SEO</span></h3>
+                    <p style="color: rgba(255,255,255,0.6); font-size: 0.85rem; line-height: 1.7;"><span class="arabic-only">تحسين داخل الموقع: اختيار كلمات مفتاحية، عنوان قوي، وصف، تنظيم المقال، كتابة محتوى مفيد.</span><span class="english-only">On-site optimization: Keywords, strong Title, Meta Description, article structure (H1/H2), useful content.</span></p>
+                </div>
+                <div class="seo-card">
+                    <div class="seo-icon" style="background: rgba(250,204,21,0.15);">🔗</div>
+                    <h3 style="font-weight: 800; font-size: 1.2rem; margin-bottom: 10px; color: #FACC15;"><span class="arabic-only">2) SEO خارجي (Off-Page)</span><span class="english-only">2) Off-Page SEO</span></h3>
+                    <p style="color: rgba(255,255,255,0.6); font-size: 0.85rem; line-height: 1.7;"><span class="arabic-only">الحصول على روابط من مواقع أخرى (Backlinks)، شهرة الموقع وثقة Google فيه.</span><span class="english-only">Getting links from other sites (Backlinks), site popularity and Google trust.</span></p>
+                </div>
+                <div class="seo-card">
+                    <div class="seo-icon" style="background: rgba(250,204,21,0.15);">⚙️</div>
+                    <h3 style="font-weight: 800; font-size: 1.2rem; margin-bottom: 10px; color: #FACC15;"><span class="arabic-only">3) SEO تقني (Technical)</span><span class="english-only">3) Technical SEO</span></h3>
+                    <p style="color: rgba(255,255,255,0.6); font-size: 0.85rem; line-height: 1.7;"><span class="arabic-only">سرعة الموقع، توافق مع الموبايل، خريطة الموقع، أمان HTTPS.</span><span class="english-only">Site speed, mobile compatibility, Sitemap, HTTPS security.</span></p>
+                </div>
+            </div>
+            <div style="background: rgba(250,204,21,0.05); border: 1px solid rgba(250,204,21,0.2); border-radius: 16px; padding: 20px; margin-bottom: 24px;">
+                <p style="font-weight: 700; color: #FACC15; margin-bottom: 8px;"><span class="arabic-only">💡 مثال بسيط</span><span class="english-only">💡 Simple Example</span></p>
+                <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; line-height: 1.7;">
+                    <span class="arabic-only">لو عندك مقال عن: <strong>الربح من الإنترنت</strong> — بدل عنوان عشوائي، استخدم: <strong style="color: #FACC15;">"أفضل طرق الربح من الإنترنت 2026 (دليل شامل للمبتدئين)"</strong> — ده بيخلي Google يفهم محتواك ويرفع ترتيبك.</span>
+                    <span class="english-only">If you have an article about: <strong>making money online</strong> — instead of a random title, use: <strong style="color: #FACC15;">"Best Ways to Make Money Online 2026 (Complete Guide for Beginners)"</strong> — this helps Google understand your content and boost your ranking.</span>
+                </p>
+            </div>
+            <div style="text-align: center;">
+                <p style="font-weight: 700; color: #FACC15; margin-bottom: 12px; font-size: 1rem;"><span class="arabic-only">🛠️ أدوات مهمة</span><span class="english-only">🛠️ Important Tools</span></p>
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;">
+                    <span class="tool-badge">🔍 Google Search Console</span>
+                    <span class="tool-badge">📊 Google Analytics</span>
+                    <span class="tool-badge">🔬 Ahrefs</span>
+                    <span class="tool-badge">📈 SEMrush</span>
+                </div>
+                <p style="color: rgba(255,255,255,0.4); font-size: 0.7rem; margin-top: 10px;"><span class="arabic-only">لمتابعة أداء موقعك، معرفة الزوار، تحليل المنافسين والكلمات، متابعة ترتيبك</span><span class="english-only">Track your site performance, know visitors, analyze competitors & keywords, monitor your ranking</span></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== قسم AI Image Search الجديد ========== -->
+    <section style="padding: 30px 16px 40px; background: #0a0a0c;">
+        <div style="max-width: 700px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 24px;">
+                <p style="font-size: 0.75rem; letter-spacing: 0.25em; text-transform: uppercase; color: #FACC15; font-weight: 600; margin-bottom: 6px;">
+                    <span class="arabic-only">ذكاء اصطناعي</span>
+                    <span class="english-only">Artificial Intelligence</span>
+                </p>
+                <h2 style="font-weight: 900; font-size: 2rem; color: #fff; margin-bottom: 8px;">
+                    <span class="arabic-only">🔍 بحث بالصور بالذكاء الاصطناعي</span>
+                    <span class="english-only">🔍 AI Image Search</span>
+                </h2>
+                <p style="color: rgba(255,255,255,0.5); font-size: 0.9rem;">
+                    <span class="arabic-only">ارفع صورة لجوارب أو أي منتج، وهنعرضلك منتجات مشابهة من متجرنا (محاكاة)</span>
+                    <span class="english-only">Upload a sock or product image, and we'll show you similar items from our store (simulation)</span>
+                </p>
+            </div>
+
+            <div class="ai-search-area" id="aiSearchBox">
+                <input type="file" id="aiImageInput" accept="image/*" style="display: none;" onchange="handleAIImageUpload(event)">
+                <button class="ai-upload-btn" onclick="document.getElementById('aiImageInput').click()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                    <span class="arabic-only">اختر صورة للبحث</span>
+                    <span class="english-only">Choose an image to search</span>
+                </button>
+                <p style="margin-top: 12px; color: rgba(255,255,255,0.4); font-size: 0.7rem;" id="aiStatusText">
+                    <span class="arabic-only">لم يتم رفع صورة بعد</span>
+                    <span class="english-only">No image uploaded yet</span>
+                </p>
+            </div>
+
+            <div id="aiResultsGrid"></div>
+
+            <div style="text-align: center; margin-top: 24px; color: rgba(255,255,255,0.4); font-size: 0.75rem; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 16px;">
+                <p><strong style="color: #FACC15;">⚡ إضافات جاهزة:</strong> Shopify / WooCommerce – Visual Search بواسطة Google Lens API أو AWS Rekognition</p>
+                <p><strong style="color: #FACC15;">🔧 تكامل مخصص:</strong> API زي Google Vision أو AWS Rekognition + ElasticSearch لتجربة بحث متقدم</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer-text">
+        <p style="font-weight: 700; font-size: 1rem; color: #FACC15; margin-bottom: 6px;">DARSH STOCK</p>
+        <p class="arabic-only">© 2026 Darsh Stock. جميع الحقوق محفوظة. أول متجر متخصص في الجوارب في مصر 🇪🇬</p>
+        <p class="english-only">© 2026 Darsh Stock. All rights reserved. First specialized socks store in Egypt 🇪🇬</p>
+    </div>
+
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <img id="modalImage" src="" alt="معاينة الصورة" loading="lazy">
+        </div>
+    </div>
+
+    <button class="back-to-top" onclick="scrollToTop()" aria-label="Back to top">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
+
+    <script>
+        // ============ البيانات والتخزين المحلي ============
+        let collectionsData = JSON.parse(localStorage.getItem('darshStockData'));
+        if (!collectionsData) {
+            collectionsData = {
+                men: { title_ar: "رجالي", title_en: "Men's Collection", accent: "#FACC15", images: ["https://i.supaimg.com/6a853e10-0715-4079-9490-beb2645fc8b3/aae74f90-4849-4f4e-a29a-4e3d4030f822.jpg", "https://i.supaimg.com/6a853e10-0715-4079-9490-beb2645fc8b3/57c89f57-c06f-4c4f-b26d-9a55294f146d.jpg"] },
+                women: { title_ar: "حريمي", title_en: "Women's Collection", accent: "#f472b6", images: ["https://i.supaimg.com/6a853e10-0715-4079-9490-beb2645fc8b3/29fcdc1a-3863-4c32-b4fe-6275d7120b91.jpg", "https://i.supaimg.com/6a853e10-0715-4079-9490-beb2645fc8b3/cba3a108-8350-4740-b677-add80784a25f.jpg", "https://i.supaimg.com/6a853e10-0715-4079-9490-beb2645fc8b3/93cba1d5-6913-4f08-ad3a-01fb7bdc5070.jpg", "https://i.supaimg.com/6a853e10-0715-4079-9490-beb2645fc8b3/c7699f2c-1b63-439f-aff7-1f36e4c35f9e.jpg"] },
+                kids: { title_ar: "أطفال", title_en: "Kids Collection", accent: "#60a5fa", images: ["https://i.supaimg.com/6a853e10-0715-4079-9490-beb2645fc8b3/0823b670-5f12-4d21-afb7-37dfe4feed59.jpg", "https://i.supaimg.com/6a853e10-0715-4079-9490-beb2645fc8b3/a6fe923f-057b-466a-96f7-65fce223f3c5.jpg"] },
+                towel: { title_ar: "جوارب الفوطة", title_en: "Towel Socks", accent: "#34d399", images: ["https://i.supaimg.com/6a853e10-0715-4079-9490-beb2645fc8b3/9d7b0d80-aef3-45aa-b4fa-fac1172711a5.jpg", "https://i.supaimg.com/6a853e10-0715-4079-9490-beb2645fc8b3/c3507827-bb97-4e6c-9c17-f3b9a5d9d084.jpg"] }
+            };
+            localStorage.setItem('darshStockData', JSON.stringify(collectionsData));
+        }
+
+        function saveToLocal() { localStorage.setItem('darshStockData', JSON.stringify(collectionsData)); }
+
+        function renderCollections() {
+            const container = document.getElementById('collectionsContainer');
+            if (!container) return;
+            container.innerHTML = '';
+            const order = ['men', 'women', 'kids', 'towel'];
+            for (let key of order) {
+                const col = collectionsData[key];
+                if (!col) continue;
+                const section = document.createElement('section');
+                section.style.cssText = 'padding-bottom: 32px;';
+                section.innerHTML = `
+                <div style="margin-bottom: 16px; text-align: center;">
+                    <p style="font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; color: ${col.accent}; margin-bottom: 4px;">
+                        <span class="arabic-only">${col.title_ar}</span>
+                        <span class="english-only">${col.title_en}</span>
+                    </p>
+                    <h2 style="font-weight: 900; text-transform: uppercase; font-size: 1.8rem; color: #fff;">
+                        <span class="arabic-only">${col.title_ar}</span>
+                        <span class="english-only">${col.title_en}</span>
+                    </h2>
+                    <div style="margin-top: 8px; height: 2px; width: 48px; margin-left: auto; margin-right: auto; border-radius: 10px; background: ${col.accent};"></div>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;">
+                    ${col.images.map(img => `
+                    <div class="card" onclick="openModalViaUrl('${img.replace(/'/g, "\\'")}')">
+                        <img src="${img}" alt="جوارب ${col.title_ar}" loading="lazy">
+                        <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 10px; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); opacity: 0; transition: opacity 0.2s; text-align: center; font-size: 0.7rem; color: #fff;">
+                            <span class="arabic-only">🔍 اضغط للمعاينة</span>
+                            <span class="english-only">🔍 Click to preview</span>
+                        </div>
+                    </div>`).join('')}
+                </div>`;
+                container.appendChild(section);
+            }
+        }
+
+        window.openModalViaUrl = function(url) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            if (modalImg) modalImg.src = url;
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        };
+
+        function closeModal() {
+            document.getElementById('imageModal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function addNewImage() {
+            const collection = document.getElementById('collectionSelect').value;
+            const imageUrl = document.getElementById('imageUrlInput').value.trim();
+            if (!imageUrl) { alert('⚠️ الرجاء إدخال رابط صورة صحيح'); return; }
+            if (!imageUrl.match(/^https?:\/\/.+\..+/)) { alert('⚠️ رابط غير صالح (يجب أن يبدأ بـ http:// أو https://)'); return; }
+            collectionsData[collection].images.push(imageUrl);
+            saveToLocal();
+            renderCollections();
+            document.getElementById('imageUrlInput').value = '';
+            toggleAdminPanel();
+            alert('✅ تمت إضافة الصورة وحفظها');
+        }
+
+        function toggleAdminPanel() { document.getElementById('adminPanel').classList.toggle('active'); }
+
+        function toggleLanguage() {
+            document.body.classList.toggle('english');
+            document.documentElement.dir = document.body.classList.contains('english') ? 'ltr' : 'rtl';
+            document.documentElement.lang = document.body.classList.contains('english') ? 'en' : 'ar';
+        }
+
+        window.addEventListener('scroll', () => {
+            const btn = document.querySelector('.back-to-top');
+            if (window.scrollY > 300) btn.classList.add('show');
+            else btn.classList.remove('show');
+        });
+
+        function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
+
+        document.addEventListener('click', (e) => { if (e.target.classList.contains('modal')) closeModal(); });
+
+        // ========== AI Image Search (محاكاة) ==========
+        function handleAIImageUpload(event) {
+            const file = event.target.files[0];
+            const statusText = document.getElementById('aiStatusText');
+            const resultsGrid = document.getElementById('aiResultsGrid');
+
+            if (!file) return;
+
+            // تغيير النص ليوحي بالتحليل
+            if (statusText) {
+                statusText.innerHTML = document.body.classList.contains('english') ?
+                    '🔍 Analyzing image...' : '🔍 جاري تحليل الصورة...';
+            }
+
+            // محاكاة تأخير بسيط ثم عرض نتائج عشوائية
+            setTimeout(() => {
+                // تجميع كل الصور من جميع المجموعات
+                const allImages = [];
+                for (let key in collectionsData) {
+                    allImages.push(...collectionsData[key].images);
+                }
+
+                // اختيار عشوائي لـ 4 صور
+                const shuffled = allImages.sort(() => 0.5 - Math.random());
+                const selected = shuffled.slice(0, 4);
+
+                // عرض النتائج
+                if (resultsGrid) {
+                    resultsGrid.innerHTML = selected.map(img => `
+                        <img src="${img}" class="ai-preview-img" onclick="openModalViaUrl('${img.replace(/'/g, "\\'")}')" alt="نتيجة بحث">
+                    `).join('');
+                }
+
+                if (statusText) {
+                    statusText.innerHTML = document.body.classList.contains('english') ?
+                        `✅ Showing ${selected.length} similar products (simulation)` :
+                        `✅ عرض ${selected.length} منتج مشابه (محاكاة)`;
+                }
+            }, 1200); // تأخير 1.2 ثانية
+        }
+
+        window.addEventListener('load', () => {
+            renderCollections();
+        });
+    </script>
+</body>
+</html>
